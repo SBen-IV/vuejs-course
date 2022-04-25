@@ -17,7 +17,7 @@
       <span>Cart ({{ totalQuantity }})</span>
     </div>
   </header>
-  <router-view :inventory="inventory" />
+  <router-view :inventory="inventory" :addToCart="addToCart"/>
 
   <SideBar
     v-if="showSidebar"
@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import SideBar from '@/components/SideBar.vue'
+import SideBar from './components/SideBar.vue'
 import food from './food.json'
 
 export default {
