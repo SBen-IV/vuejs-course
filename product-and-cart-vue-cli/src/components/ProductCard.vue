@@ -1,9 +1,10 @@
 <template>
+    <div class="card">
     <div class="card-title">
         {{ product.name }}
     </div>
     <div class="card-body">
-        <i class="icofont-10x icofont-{{ product.icon }}"></i>
+        <i class="icofont-10x" :class="`icofont-${product.icon}`"></i>
         <form>
             <div class="row">
                 <div class="cell">
@@ -35,6 +36,7 @@
         <button @click="addToCart(product.name, quantity)" class="btn btn-light">
             Add to cart
         </button>
+    </div>
     </div>
 </template>
 
